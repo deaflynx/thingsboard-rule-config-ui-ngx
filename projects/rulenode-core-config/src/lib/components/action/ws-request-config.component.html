@@ -1,0 +1,31 @@
+<section [formGroup]="wsRequestConfigForm" fxLayout="column">
+  <mat-form-field class="mat-block" style="padding-bottom: 16px;">
+    <mat-label translate>tb.rulenode.endpoint-url-pattern</mat-label>
+    <input required matInput formControlName="webSocketUrl">
+    <mat-error *ngIf="wsRequestConfigForm.get('webSocketUrl').hasError('required')">
+      {{ 'tb.rulenode.endpoint-url-pattern-required' | translate }}
+    </mat-error>
+    <mat-hint [innerHTML]="'tb.rulenode.general-pattern-hint' | translate | safeHtml"></mat-hint>
+  </mat-form-field>
+  <mat-form-field class="mat-block">
+    <mat-label translate>tb.rulenode.timeout-sec</mat-label>
+    <input required matInput formControlName="requestTimeout">
+    <mat-error *ngIf="wsRequestConfigForm.get('requestTimeout').hasError('required')">
+      {{ 'tb.rulenode.timeout-required' | translate }}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="mat-block">
+    <mat-label translate>tb.rulenode.connection-timeout-ms</mat-label>
+    <input required matInput formControlName="connectionTimeout">
+    <mat-error *ngIf="wsRequestConfigForm.get('connectionTimeout').hasError('required')">
+      {{ 'tb.rulenode.connection-timeout-ms-required' | translate }}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="mat-block">
+    <mat-label translate>tb.rulenode.port</mat-label>
+    <input required matInput formControlName="port">
+    <mat-error *ngIf="wsRequestConfigForm.get('port').hasError('required')">
+      {{ 'tb.rulenode.port-required' | translate }}
+    </mat-error>
+  </mat-form-field>
+</section>

@@ -212,6 +212,7 @@ export default function addRuleNodeCoreLocaleEnglish(translate: TranslateService
           password: 'Password',
           'automatic-recovery': 'Automatic recovery',
           'connection-timeout-ms': 'Connection timeout (ms)',
+          'connection-timeout-ms-required': 'Connection timeout is required',
           'min-connection-timeout-ms-message': 'Only 0 ms minimum value is allowed.',
           'handshake-timeout-ms': 'Handshake timeout (ms)',
           'min-handshake-timeout-ms-message': 'Only 0 ms minimum value is allowed.',
